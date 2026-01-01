@@ -1,16 +1,27 @@
 
-
 """   
 Problem 1: Message Class (Data Structures)
 What You'll Build:
 A class that stores messages (like LangChain does internally).
 
 The Challenge:
-
+""" 
 # Create a Message class that:
 # 1. Takes content and role in __init__
 # 2. Has a method to_dict() that returns a dictionary
 # 3. Has a method __str__() that prints nicely
+
+class Message: 
+    def __init__(self,content,role):
+        self.content = content   
+        self.role = role     
+    def to_dict(self):
+        pass 
+    def __str__(self):
+        pass
+
+
+"""   
 
 # Usage example:
 msg = Message(content="Hello", role="user")
@@ -53,7 +64,6 @@ Difficulty: ⭐ (Easy)
 Time: 30 minutes
 Skills: Classes, __init__, methods, __str__(), dictionaries
 """
-
 
 
 
