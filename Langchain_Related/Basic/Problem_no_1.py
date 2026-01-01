@@ -1,4 +1,4 @@
-
+import json
 """   
 Problem 1: Message Class (Data Structures)
 What You'll Build:
@@ -16,11 +16,19 @@ class Message:
         self.content = content   
         self.role = role     
     def to_dict(self):
-        pass 
+        return {
+            "role": self.role, 
+            "content":self.content,
+        }
     def __str__(self):
-        pass
+        return f"{self.content}: {self.role}"
+    def to_json(self): 
+        return json.dumps(self.to_dict(), indent=4)
 
-
+msg = Message(content="Hello", role="User")
+print(msg) 
+print(msg.to_dict())  
+print(msg.to_json())
 """   
 
 # Usage example:
